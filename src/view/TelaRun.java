@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import controller.RunController;
 import controller.SearchController;
 
 import javax.swing.JLabel;
@@ -74,9 +75,11 @@ public class TelaRun extends JFrame {
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		JButton btnNewButton = new JButton("OK");
-		btnNewButton.setBounds(115, 140, 90, 20);
-		contentPane.add(btnNewButton);
+		JButton btnOK = new JButton("OK");
+		btnOK.setBounds(115, 140, 90, 20);
+		RunController runController = new RunController(textField, this);
+		btnOK.addActionListener(runController);
+		contentPane.add(btnOK);
 		
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(210, 140, 90, 20);
@@ -84,8 +87,8 @@ public class TelaRun extends JFrame {
 		
 		JButton btnProcurar = new JButton("Procurar");
 		btnProcurar.setBounds(305, 140, 90, 20);
-		contentPane.add(btnProcurar);
 		SearchController searchController = new SearchController(textField);
 		btnProcurar.addActionListener(searchController);
+		contentPane.add(btnProcurar);
 	}
 }
