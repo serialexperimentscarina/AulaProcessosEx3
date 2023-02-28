@@ -13,7 +13,6 @@ import controller.SearchController;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Font;
-import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
