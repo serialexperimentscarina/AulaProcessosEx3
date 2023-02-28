@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -13,6 +12,7 @@ public class SearchController implements ActionListener {
 	
 	private JTextField textField;
 	
+	// Busca arquivos executáveis Windows, via JFileChooser, seleciona o arquivo a ser executado e escreve seu caminho completo no JTextField.
 	public SearchController(JTextField textField) {
 		this.textField = textField;
 	}

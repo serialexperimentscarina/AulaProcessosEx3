@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import controller.CancelController;
 import controller.RunController;
 import controller.SearchController;
 
@@ -83,6 +84,8 @@ public class TelaRun extends JFrame {
 		
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(210, 140, 90, 20);
+		CancelController cancelController = new CancelController(this);
+		btnCancelar.addActionListener(cancelController);
 		contentPane.add(btnCancelar);
 		
 		JButton btnProcurar = new JButton("Procurar");

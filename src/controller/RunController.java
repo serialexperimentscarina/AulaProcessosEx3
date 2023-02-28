@@ -13,6 +13,9 @@ public class RunController implements ActionListener{
 	private JTextField textField;
 	private JFrame frame;
 	
+	// Tenta executar o que está escrito no JTextField. 
+	// Caso o arquivo seja inválido, retorna uma mensagem de erro. Uma vez executado, sem erro, a tela é ser finalizada 
+
 	public RunController(JTextField textField,JFrame frame) {
 		this.textField = textField;
 		this.frame = frame;
