@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controller.SearchController;
+
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Font;
@@ -29,6 +32,7 @@ public class TelaRun extends JFrame {
 			public void run() {
 				try {
 					TelaRun frame = new TelaRun();
+					frame.setResizable(false);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -81,5 +85,7 @@ public class TelaRun extends JFrame {
 		JButton btnProcurar = new JButton("Procurar");
 		btnProcurar.setBounds(305, 140, 90, 20);
 		contentPane.add(btnProcurar);
+		SearchController searchController = new SearchController(textField);
+		btnProcurar.addActionListener(searchController);
 	}
 }
